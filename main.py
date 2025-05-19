@@ -7,7 +7,6 @@ def main(page: ft.Page):
     page.window_width = 1080
     page.window_height = 1920
 
-    # ESSENCIAL PARA OCUPAR TELA TODA
     page.padding = 0
     page.margin = 0
     page.spacing = 0
@@ -22,9 +21,7 @@ def main(page: ft.Page):
         expand=True,
     )
 
-
     conteudo = ft.Container(
-        expand=True,
         content=ft.Column(
             [
                 ft.Text("Bem-vindo!", size=30, color="white"),
@@ -39,6 +36,7 @@ def main(page: ft.Page):
         ft.Stack(
             controls=[fundo, conteudo],
             expand=True,
+            alignment=ft.alignment.center,  # <-- isso centraliza tudo
         )
     )
 
