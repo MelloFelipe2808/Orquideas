@@ -41,7 +41,9 @@ def main(page: ft.Page):
                 fundo,
                 filtro_fosco,
                 ft.Container(expand=True, content=conteudo,),
-            ]
+            ],
+            expand= True
+            
         )
     )
 
