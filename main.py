@@ -10,8 +10,8 @@ def main(page: ft.Page):
     page.padding = 0
     page.margin = 0
     page.spacing = 0
-    page.horizontal_alignment = ft.CrossAxisAlignment.STRETCH
-    page.vertical_alignment = ft.MainAxisAlignment.STRETCH
+    page.horizontal_alignment = 'stretch'
+    page.vertical_alignment = 'stretch'
 
     fundo = ft.Image(
         src="img.png",
