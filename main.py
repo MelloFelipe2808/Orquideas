@@ -5,6 +5,12 @@ def main(page: ft.Page):
     page.window_width = 1080
     page.window_height = 1920
     page.scroll = 'auto'
+    page.padding = 0
+    page.margin = 0
+    page.spacing = 0
+    page.horizontal_alignment = ft.CrossAxisAlignment.STRETCH
+    page.vertical_alignment = ft.MainAxisAlignment.STRETCH
+
 
     fundo = ft.Image(
         src="img.png",  # Ou "fundo.jpg" se for desktop
