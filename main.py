@@ -42,7 +42,7 @@ def main(page: ft.Page):
                 filtro_fosco,
                 ft.Container(expand=True, content=conteudo,),
             ],
-            expand= True
+            expand= True,
             
         )
     )
