@@ -1,7 +1,7 @@
 import flet as ft
 
 def main(page: ft.Page):
-    page.title = "Fundo 100%"
+    page.title = "Recanto Access"
     page.scroll = 'auto'
     page.window_width = 1080
     page.window_height = 1920
@@ -19,13 +19,11 @@ def main(page: ft.Page):
         expand=True,
     )
 
-    filtro_fosco = ft.Container(
-        expand=True,
-        bgcolor="rgba(0, 0, 0, 0.5)",
-    )
 
     conteudo = ft.Container(
         expand=True,
+        width=1080,
+        height=1920,
         content=ft.Column(
             [
                 ft.Text("Bem-vindo!", size=30, color="white"),
@@ -38,7 +36,7 @@ def main(page: ft.Page):
 
     page.add(
         ft.Stack(
-            controls=[fundo, filtro_fosco, conteudo],
+            controls=[fundo, conteudo],
             expand=True,
         )
     )
