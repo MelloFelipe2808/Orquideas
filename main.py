@@ -3,6 +3,7 @@ import flet as ft
 def main(page: ft.Page):
     page.title = "Recanto Access"
     page.scroll = 'auto'
+    page.adaptive = True
     page.window_width = 1080
     page.window_height = 1920
 
@@ -14,6 +15,8 @@ def main(page: ft.Page):
     page.vertical_alignment = 'stretch'
 
     fundo = ft.Image(
+        width=1080,
+        height=1920,
         src="img.png",
         fit=ft.ImageFit.COVER,
         expand=True,
@@ -22,8 +25,6 @@ def main(page: ft.Page):
 
     conteudo = ft.Container(
         expand=True,
-        width=1080,
-        height=1920,
         content=ft.Column(
             [
                 ft.Text("Bem-vindo!", size=30, color="white"),
