@@ -14,8 +14,7 @@ def main(page: ft.Page):
     page.vertical_alignment = 'stretch'
 
     fundo = ft.Image(
-        width=1080,
-        height=1920,
+        scale=1.7,
         src="img.png",
         fit=ft.ImageFit.COVER,
         expand=True,
