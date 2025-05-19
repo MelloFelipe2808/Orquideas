@@ -44,4 +44,4 @@ def main(page: ft.Page):
 
 
 # Apenas esta chamada
-ft.app(target=main, view="web_browser", assets_dir='assets',host= '0.0.0.0', port=8500)
+ft.app(target=main, view="web_browser", assets_dir='assets',host= '0.0.0.0', port=5000)
