@@ -7,7 +7,7 @@ def main(page: ft.Page):
     page.scroll = 'auto'
 
     fundo = ft.Image(
-        src="img.png",  # Ou "fundo.jpg" se for desktop
+        src="assets/img.png",  # Ou "fundo.jpg" se for desktop
         fit=ft.ImageFit.COVER,
         expand=True,
     )
