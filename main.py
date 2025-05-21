@@ -1,4 +1,7 @@
 import flet as ft
+from views.login import login_view
+from views.registro import registro_view
+from views.home import teste_view
 
 def main(page: ft.Page):
     page.title = "Recanto Access"
@@ -6,41 +9,29 @@ def main(page: ft.Page):
     page.adaptive = True
     page.window_width = 1080
     page.window_height = 1920
-
     page.padding = 0
     page.margin = 0
     page.spacing = 0
     page.horizontal_alignment = 'stretch'
     page.vertical_alignment = 'stretch'
 
-    fundo = ft.Image(
-        scale=1.7,
-        src="img.png",
-        fit=ft.ImageFit.COVER,
-        expand=True,
-    )
+    def route_change(e):
+        page.views.clear()
+        if page.route == "/":
+            page.views.append(login_view(page))
+        elif page.route == "/registro":
+            page.views.append(registro_view(page))
+        elif page.route == "/teste":
+            page.views.append(teste_view(page))
+        page.update()
 
-    conteudo = ft.Container(
-        content=ft.Column(
-            [
-                ft.Text("Bem-vindo!", size=30, color="white"),
-                ft.ElevatedButton("Entrar", on_click=lambda e: print("Entrar")),
-            ],
-            alignment=ft.MainAxisAlignment.CENTER,
-            horizontal_alignment=ft.CrossAxisAlignment.CENTER,
-        ),
-    )
-
-    page.add(
-        ft.Stack(
-            controls=[fundo, conteudo],
-            expand=True,
-            alignment=ft.alignment.center,  # <-- isso centraliza tudo
-        )
-    )
+    page.on_route_change = route_change
+    page.go(page.route)
 
 ft.app(
     target=main,
     view="web_browser",
-    assets_dir="assets"
+    assets_dir="assets",
+    host='192.168.1.7',
+    port=5000
 )
