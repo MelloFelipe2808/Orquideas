@@ -32,4 +32,5 @@ ft.app(
     target=main,
     view="web_browser",
     assets_dir="assets",
+    host='0.0.0.0,
 )
