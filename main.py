@@ -32,4 +32,6 @@ ft.app(
     target=main,
     view="web_browser",
     assets_dir="assets",
+    host='192.168.1.7',
+    port=5000
 )
